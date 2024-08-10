@@ -48,7 +48,7 @@ const makePopupWhite = function(){
 
 const observerOptions = {
     root:null,
-    threshold:0.4
+    threshold:0.1
 }
 
 const observer = new IntersectionObserver(observerCallback,observerOptions);
