@@ -11,12 +11,34 @@ const footerEl = document.querySelector('.site-footer');
 const stickyNav = document.querySelector('#StickyNavSearchCart');
 const cartIndicator = stickyNav.querySelector('.site-header__cart-indicator');
 const addToCartBtnBlue = document.querySelector('#AddToCart-product-template');
+const sizeSelectBoxEl = document.querySelector('.single-option-selector.single-option-selector-product-template.product-form__input');
+const colorSelectBoxEl = document.querySelector('#SingleOptionSelector-1');
+const minusBtn = document.querySelector('.js-qty__adjust.js-qty__adjust--minus');
+const plusBtn = document.querySelector('.js-qty__adjust.js-qty__adjust--plus');
+const quantity = document.querySelector('#Quantity');
+let currentQuantity = +quantity.textContent || 1;
 
-const product = {
+minusBtn.addEventListener('click', function() {
+
+    if (currentQuantity > 0) {
+        currentQuantity--;
+        quantity.value = currentQuantity;
+        document.querySelector('.popup--quantity').textContent = currentQuantity;
+    }
+});
+
+plusBtn.addEventListener('click', function() {
+
+    currentQuantity++;
+    quantity.value = currentQuantity;
+    document.querySelector('.popup--quantity').textContent = currentQuantity;
+});
+
+let product = {
     productName:'Vans Sh 8 HI',
     price:99.95,
-    size:42,
-    color:'blue',
+    size:4,
+    color:'black',
     quantity:1
 }
 
@@ -68,6 +90,15 @@ const showErrorMessage = () => {
 const showSuccessMessageAndAddToCart = () => {
     notificationSuccessEl.classList.add('notification--active');
     cartIcons.forEach(cartIcon => cartIcon.classList.remove('hide'));
+
+    product = {
+        productName: product.productName,
+        price:product.price,
+        size: +document.querySelector('.popup--size').textContent,
+        color: document.querySelector('.popup--color').textContent,
+        quantity: currentQuantity
+    }
+
     cart.push(product);
 
     setTimeout(() => {
@@ -81,6 +112,9 @@ const addToCart = () => {
     cart.length === 0 ? showSuccessMessageAndAddToCart() : showErrorMessage();
     closePopup();
 };
+
+sizeSelectBoxEl.addEventListener('change',(e) => document.querySelector('.popup--size').textContent = e.target.value);
+colorSelectBoxEl.addEventListener('change',(e) => document.querySelector('.popup--color').textContent = e.target.value);
 
 addToCartEl.addEventListener('click',addToCart);
 addToCartBtnBlue.addEventListener('click',addToCart);
