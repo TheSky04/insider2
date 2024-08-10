@@ -1,0 +1,108 @@
+
+:root {
+    --color-title:#fff;
+    --color-feature: rgba(255,255,255,.7);
+    --popup-background:linear-gradient(90deg,#051336,#000000);
+    --color-times:#fff;
+    --color-addtoCart:linear-gradient(90deg,#40c057,#2b8a3e);
+}
+
+.popup--container {
+    position:fixed;
+    right:5px;
+    bottom:5px;
+    max-width:450px;
+    background: var(--popup-background);
+    z-index:1000000000000;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+    transition: all 0.5s ease;
+    cursor:pointer;
+}
+
+.popup--container p {
+    margin:0;
+    padding:0;
+}
+
+.popup--row {
+    display:grid;
+    grid-template-columns: 200px 100px;
+    align-items: center;
+}
+
+.popup--row:last-child{
+    margin-bottom:10px;
+}
+
+.popup--productNameTitle,.popup--priceTitle,.popup--sizeTitle,.popup--colorTitle,.popup--quantityTitle {
+    color:var(--color-title);
+}
+
+.popup--productName, .popup--price, .popup--size, .popup--color, .popup--quantity {
+    color:var(--color-feature);
+}
+
+.popup--times {
+    position:absolute;
+    top:5px;
+    right:8px;
+    color:var(--color-times);
+    cursor:pointer;
+    font-size:26px;
+    transition:all .3s;
+}
+
+.popup--times:hover{
+    opacity:.8;
+}
+
+.popup--addToCart{
+    background: var( --color-addtoCart);
+    border:none;
+    color:#fff;
+    padding:5px 15px;
+    width:100%;
+    border-radius:5px;
+    box-shadow:0 2px 4px rgba(255,255,255,.1);
+    transition:all .5s;
+    outline:none;
+}
+
+.popup--addToCart:hover {
+   
+    background: linear-gradient(90deg,#69db7c,#2b8a3e);
+    
+}
+
+.notification--error.notification--active{
+    text-align: center;
+    padding:7px 0;
+}
+
+.site-header__search.small--hide{
+    margin-bottom:0;
+}
+
+@media only screen and (max-width:500px){
+
+    .popup--productNameTitle,.popup--priceTitle,.popup--sizeTitle,.popup--colorTitle,.popup--quantityTitle{
+        font-size:12px;
+    }
+
+    .popup--productName, .popup--price, .popup--size, .popup--color, .popup--quantity{
+        font-size:12px;
+    }
+
+    .popup--addToCart{
+        padding:7px 7px;
+        font-size:12px;
+        margin-top:10px;
+    }
+
+    .popup--row {
+        grid-template-columns: 120px 80px;
+    }
+
+}

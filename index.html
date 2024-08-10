@@ -15,6 +15,7 @@
     <meta property="og:description" content="Vans are a staple in skate culture and street style, and this skate sneaker is no exception. Introduced in the early 70's, the Vans SK8 Hi was responsible for the reduced number of ankle injuries in the skating scene with the extra padded ankle support, but its popularity has grown across different cultural scenes. The">
     <meta property="og:price:amount" content="99.95">
     <meta property="og:price:currency" content="SGD">
+    <link rel="stylesheet" href="style.css">
     <meta property="og:image" content="http://insiderdemo.myshopify.com/cdn/shop/products/4e151d7b538e5aba66295f3a5d67b1f4_1200x1200.jpg?v=1611109365">
     <meta property="og:image" content="http://insiderdemo.myshopify.com/cdn/shop/products/e4f442f26b28594da101d152538d50d2_1200x1200.jpg?v=1611109365">
     <meta property="og:image" content="http://insiderdemo.myshopify.com/cdn/shop/products/c33f5349bfd035c332b547fc332060bb_1200x1200.jpg?v=1611109365">
@@ -24,6 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="VANS SH-8 HI">
     <meta name="twitter:description" content="Vans are a staple in skate culture and street style, and this skate sneaker is no exception. Introduced in the early 70's, the Vans SK8 Hi was responsible for the reduced number of ankle injuries in the skating scene with the extra padded ankle support, but its popularity has grown across different cultural scenes. The">
+    <script defer src="script.js"></script>
     <script type="text/javascript" async="" src="https://widget.intercom.io/widget/ny6w928i"></script>
     <script type="text/javascript" async="" src="https://iis.intercom.io/widget.js?shop=insiderdemo.myshopify.com"></script>
     <script type="text/javascript" async="" src="https://shopify.intercom.io/widget.js?shop=insiderdemo.myshopify.com"></script>
@@ -3985,6 +3987,39 @@
 
 <body class="template-product" cz-shortcut-listen="true">
 
+    <div class="popup--container">
+
+        <p class="popup--times">&times;</p>
+
+        <div class="popup--row">
+            <p class="popup--productNameTitle">Product Name</p>
+            <p class="popup--productName"></p>
+        </div>
+
+        <div class="popup--row">
+            <p class="popup--priceTitle">Price</p>
+            <p class="popup--price"></p>
+        </div>
+    
+        <div class="popup--row">
+            <p class="popup--sizeTitle">Size</p>
+            <p class="popup--size"></p>
+        </div>
+    
+        <div class="popup--row">
+            <p class="popup--colorTitle">Color</p>
+            <p class="popup--color"></p>
+        </div>
+    
+        <div class="popup--row">
+            <p class="popup--quantityTitle">Quantity</p>
+            <p class="popup--quantity"></p>
+        </div>
+
+        <button class="popup--addToCart">Add to Cart</button>
+    
+    </div>
+
     <a class="in-page-link visually-hidden skip-link" href="#MainContent">
         Skip to content
     </a>
@@ -4245,78 +4280,57 @@
             data-section-type="header">
             <div class="site-header__upper page-width">
                 <div class="grid grid--table">
-                    <div class="grid__item small--one-quarter medium-up--hide">
-                        <button type="button" class="text-link site-header__link js-drawer-open-left"
-                            aria-expanded="false">
-                            <span class="site-header__menu-toggle--open">
-                                <svg aria-hidden="true" focusable="false" role="presentation"
-                                    class="icon icon-hamburger" viewBox="0 0 32 32">
-                                    <path fill="#444"
-                                        d="M4.889 14.958h22.222v2.222H4.889v-2.222zM4.889 8.292h22.222v2.222H4.889V8.292zM4.889 21.625h22.222v2.222H4.889v-2.222z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span class="site-header__menu-toggle--close">
-                                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close"
-                                    viewBox="0 0 32 32">
-                                    <path fill="#444"
-                                        d="M25.313 8.55l-1.862-1.862-7.45 7.45-7.45-7.45L6.689 8.55l7.45 7.45-7.45 7.45 1.862 1.862 7.45-7.45 7.45 7.45 1.862-1.862-7.45-7.45z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span class="icon__fallback-text">Site navigation</span>
+                  <div class="grid__item small--one-quarter medium-up--hide">
+                    <button type="button" class="text-link site-header__link js-drawer-open-left">
+                      <span class="site-header__menu-toggle--open">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" viewBox="0 0 32 32"><path fill="#444" d="M4.889 14.958h22.222v2.222H4.889v-2.222zM4.889 8.292h22.222v2.222H4.889V8.292zM4.889 21.625h22.222v2.222H4.889v-2.222z"/></svg>
+                      </span>
+                      <span class="site-header__menu-toggle--close">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 32 32"><path fill="#444" d="M25.313 8.55l-1.862-1.862-7.45 7.45-7.45-7.45L6.689 8.55l7.45 7.45-7.45 7.45 1.862 1.862 7.45-7.45 7.45 7.45 1.862-1.862-7.45-7.45z"/></svg>
+                      </span>
+                      <span class="icon__fallback-text">Site navigation</span>
+                    </button>
+                  </div>
+                  <div class="grid__item small--one-half medium-up--two-thirds small--text-center">
+                    
+                      <div class="site-header__logo h1" itemscope itemtype="http://schema.org/Organization">
+                    
+                      
+                        
+                        <a href="/" itemprop="url" class="site-header__logo-link">
+                          <img src="//insiderdemo.myshopify.com/cdn/shop/files/POSHBEYAZ_100x.png?v=1613769152"
+                               srcset="//insiderdemo.myshopify.com/cdn/shop/files/POSHBEYAZ_100x.png?v=1613769152 1x, //insiderdemo.myshopify.com/cdn/shop/files/POSHBEYAZ_100x@2x.png?v=1613769152 2x"
+                               alt="Posh"
+                               itemprop="logo">
+                        </a>
+                      
+                    
+                      </div>
+                    
+                  </div>
+            
+                  <div class="grid__item small--one-quarter medium-up--one-third text-right">
+                    <div id="SiteNavSearchCart" class="site-header__search-cart-wrapper">
+                      <form action="/search" method="get" class="site-header__search small--hide" role="search">
+                        
+                          <label for="SiteNavSearch" class="visually-hidden">Search</label>
+                          <input type="search" name="q" id="SiteNavSearch" placeholder="Search" aria-label="Search" class="site-header__search-input">
+            
+                        <button type="submit" class="text-link site-header__link site-header__search-submit">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 32 32"><path fill="#444" d="M21.839 18.771a10.012 10.012 0 0 0 1.57-5.39c0-5.548-4.493-10.048-10.034-10.048-5.548 0-10.041 4.499-10.041 10.048s4.493 10.048 10.034 10.048c2.012 0 3.886-.594 5.456-1.61l.455-.317 7.165 7.165 2.223-2.263-7.158-7.165.33-.468zM18.995 7.767c1.498 1.498 2.322 3.49 2.322 5.608s-.825 4.11-2.322 5.608c-1.498 1.498-3.49 2.322-5.608 2.322s-4.11-.825-5.608-2.322c-1.498-1.498-2.322-3.49-2.322-5.608s.825-4.11 2.322-5.608c1.498-1.498 3.49-2.322 5.608-2.322s4.11.825 5.608 2.322z"/></svg>
+                          <span class="icon__fallback-text">Search</span>
                         </button>
+                      </form>
+            
+                      <a href="/cart" class="site-header__link site-header__cart">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart" viewBox="0 0 31 32"><path d="M14.568 25.629c-1.222 0-2.111.889-2.111 2.111 0 1.111 1 2.111 2.111 2.111 1.222 0 2.111-.889 2.111-2.111s-.889-2.111-2.111-2.111zm10.22 0c-1.222 0-2.111.889-2.111 2.111 0 1.111 1 2.111 2.111 2.111 1.222 0 2.111-.889 2.111-2.111s-.889-2.111-2.111-2.111zm2.555-3.777H12.457L7.347 7.078c-.222-.333-.555-.667-1-.667H1.792c-.667 0-1.111.444-1.111 1s.444 1 1.111 1h3.777l5.11 14.885c.111.444.555.666 1 .666h15.663c.555 0 1.111-.444 1.111-1 0-.666-.555-1.111-1.111-1.111zm2.333-11.442l-18.44-1.555h-.111c-.555 0-.777.333-.667.889l3.222 9.22c.222.555.889 1 1.444 1h13.441c.555 0 1.111-.444 1.222-1l.778-7.443c.111-.555-.333-1.111-.889-1.111zm-2 7.443H15.568l-2.333-6.776 15.108 1.222-.666 5.554z"/></svg>
+                        <span class="icon__fallback-text">Cart</span>
+                        <span class="site-header__cart-indicator hide"></span>
+                      </a>
                     </div>
-                    <div class="grid__item small--one-half medium-up--two-thirds small--text-center">
-
-                        <div class="site-header__logo h1" itemscope="" itemtype="http://schema.org/Organization">
-
-
-
-                            <a href="/" itemprop="url" class="site-header__logo-link">
-                                <img src="//insiderdemo.myshopify.com/cdn/shop/files/POSHBEYAZ_100x.png?v=1613769152"
-                                    srcset="//insiderdemo.myshopify.com/cdn/shop/files/POSHBEYAZ_100x.png?v=1613769152 1x, //insiderdemo.myshopify.com/cdn/shop/files/POSHBEYAZ_100x@2x.png?v=1613769152 2x"
-                                    alt="Posh" itemprop="logo">
-                            </a>
-
-
-                        </div>
-
-                    </div>
-
-                    <div class="grid__item small--one-quarter medium-up--one-third text-right">
-                        <div id="SiteNavSearchCart" class="site-header__search-cart-wrapper">
-                            <form action="/search" method="get" class="site-header__search small--hide" role="search">
-
-                                <label for="SiteNavSearch" class="visually-hidden">Search</label>
-                                <input type="search" name="q" id="SiteNavSearch" placeholder="Search"
-                                    aria-label="Search" class="site-header__search-input">
-
-                                <button type="submit" class="text-link site-header__link site-header__search-submit">
-                                    <svg aria-hidden="true" focusable="false" role="presentation"
-                                        class="icon icon-search" viewBox="0 0 32 32">
-                                        <path fill="#444"
-                                            d="M21.839 18.771a10.012 10.012 0 0 0 1.57-5.39c0-5.548-4.493-10.048-10.034-10.048-5.548 0-10.041 4.499-10.041 10.048s4.493 10.048 10.034 10.048c2.012 0 3.886-.594 5.456-1.61l.455-.317 7.165 7.165 2.223-2.263-7.158-7.165.33-.468zM18.995 7.767c1.498 1.498 2.322 3.49 2.322 5.608s-.825 4.11-2.322 5.608c-1.498 1.498-3.49 2.322-5.608 2.322s-4.11-.825-5.608-2.322c-1.498-1.498-2.322-3.49-2.322-5.608s.825-4.11 2.322-5.608c1.498-1.498 3.49-2.322 5.608-2.322s4.11.825 5.608 2.322z">
-                                        </path>
-                                    </svg>
-                                    <span class="icon__fallback-text">Search</span>
-                                </button>
-                            </form>
-
-                            <a href="/cart" class="site-header__link site-header__cart">
-                                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart"
-                                    viewBox="0 0 31 32">
-                                    <path
-                                        d="M14.568 25.629c-1.222 0-2.111.889-2.111 2.111 0 1.111 1 2.111 2.111 2.111 1.222 0 2.111-.889 2.111-2.111s-.889-2.111-2.111-2.111zm10.22 0c-1.222 0-2.111.889-2.111 2.111 0 1.111 1 2.111 2.111 2.111 1.222 0 2.111-.889 2.111-2.111s-.889-2.111-2.111-2.111zm2.555-3.777H12.457L7.347 7.078c-.222-.333-.555-.667-1-.667H1.792c-.667 0-1.111.444-1.111 1s.444 1 1.111 1h3.777l5.11 14.885c.111.444.555.666 1 .666h15.663c.555 0 1.111-.444 1.111-1 0-.666-.555-1.111-1.111-1.111zm2.333-11.442l-18.44-1.555h-.111c-.555 0-.777.333-.667.889l3.222 9.22c.222.555.889 1 1.444 1h13.441c.555 0 1.111-.444 1.222-1l.778-7.443c.111-.555-.333-1.111-.889-1.111zm-2 7.443H15.568l-2.333-6.776 15.108 1.222-.666 5.554z">
-                                    </path>
-                                </svg>
-                                <span class="icon__fallback-text">Cart</span>
-                                <span class="site-header__cart-indicator hide"></span>
-                            </a>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
 
             <div id="StickNavWrapper" style="height: 59.2px;">
                 <div id="StickyBar" class="sticky">
@@ -5561,43 +5575,30 @@
                                 </div>
                                 <div class="grid__item one-fifth text-right">
                                     <div class="sticky-only" id="StickyNavSearchCart">
-                                        <form action="/search" method="get" class="site-header__search small--hide"
-                                            role="search">
-
+                                        <form action="/search" method="get" class="site-header__search small--hide" role="search">
+                                          
                                             <label for="SiteNavSearch" class="visually-hidden">Search</label>
-                                            <input type="search" name="q" id="SiteNavSearch" placeholder="Search"
-                                                aria-label="Search" class="site-header__search-input">
-
-                                            <button type="submit"
-                                                class="text-link site-header__link site-header__search-submit">
-                                                <svg aria-hidden="true" focusable="false" role="presentation"
-                                                    class="icon icon-search" viewBox="0 0 32 32">
-                                                    <path fill="#444"
-                                                        d="M21.839 18.771a10.012 10.012 0 0 0 1.57-5.39c0-5.548-4.493-10.048-10.034-10.048-5.548 0-10.041 4.499-10.041 10.048s4.493 10.048 10.034 10.048c2.012 0 3.886-.594 5.456-1.61l.455-.317 7.165 7.165 2.223-2.263-7.158-7.165.33-.468zM18.995 7.767c1.498 1.498 2.322 3.49 2.322 5.608s-.825 4.11-2.322 5.608c-1.498 1.498-3.49 2.322-5.608 2.322s-4.11-.825-5.608-2.322c-1.498-1.498-2.322-3.49-2.322-5.608s.825-4.11 2.322-5.608c1.498-1.498 3.49-2.322 5.608-2.322s4.11.825 5.608 2.322z">
-                                                    </path>
-                                                </svg>
-                                                <span class="icon__fallback-text">Search</span>
-                                            </button>
+                                            <input type="search" name="q" id="SiteNavSearch" placeholder="Search" aria-label="Search" class="site-header__search-input">
+                              
+                                          <button type="submit" class="text-link site-header__link site-header__search-submit">
+                                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 32 32"><path fill="#444" d="M21.839 18.771a10.012 10.012 0 0 0 1.57-5.39c0-5.548-4.493-10.048-10.034-10.048-5.548 0-10.041 4.499-10.041 10.048s4.493 10.048 10.034 10.048c2.012 0 3.886-.594 5.456-1.61l.455-.317 7.165 7.165 2.223-2.263-7.158-7.165.33-.468zM18.995 7.767c1.498 1.498 2.322 3.49 2.322 5.608s-.825 4.11-2.322 5.608c-1.498 1.498-3.49 2.322-5.608 2.322s-4.11-.825-5.608-2.322c-1.498-1.498-2.322-3.49-2.322-5.608s.825-4.11 2.322-5.608c1.498-1.498 3.49-2.322 5.608-2.322s4.11.825 5.608 2.322z"></path></svg>
+                                            <span class="icon__fallback-text">Search</span>
+                                          </button>
                                         </form>
-
+                              
                                         <a href="/cart" class="site-header__link site-header__cart">
-                                            <svg aria-hidden="true" focusable="false" role="presentation"
-                                                class="icon icon-cart" viewBox="0 0 31 32">
-                                                <path
-                                                    d="M14.568 25.629c-1.222 0-2.111.889-2.111 2.111 0 1.111 1 2.111 2.111 2.111 1.222 0 2.111-.889 2.111-2.111s-.889-2.111-2.111-2.111zm10.22 0c-1.222 0-2.111.889-2.111 2.111 0 1.111 1 2.111 2.111 2.111 1.222 0 2.111-.889 2.111-2.111s-.889-2.111-2.111-2.111zm2.555-3.777H12.457L7.347 7.078c-.222-.333-.555-.667-1-.667H1.792c-.667 0-1.111.444-1.111 1s.444 1 1.111 1h3.777l5.11 14.885c.111.444.555.666 1 .666h15.663c.555 0 1.111-.444 1.111-1 0-.666-.555-1.111-1.111-1.111zm2.333-11.442l-18.44-1.555h-.111c-.555 0-.777.333-.667.889l3.222 9.22c.222.555.889 1 1.444 1h13.441c.555 0 1.111-.444 1.222-1l.778-7.443c.111-.555-.333-1.111-.889-1.111zm-2 7.443H15.568l-2.333-6.776 15.108 1.222-.666 5.554z">
-                                                </path>
-                                            </svg>
-                                            <span class="icon__fallback-text">Cart</span>
-                                            <span class="site-header__cart-indicator hide"></span>
+                                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart" viewBox="0 0 31 32"><path d="M14.568 25.629c-1.222 0-2.111.889-2.111 2.111 0 1.111 1 2.111 2.111 2.111 1.222 0 2.111-.889 2.111-2.111s-.889-2.111-2.111-2.111zm10.22 0c-1.222 0-2.111.889-2.111 2.111 0 1.111 1 2.111 2.111 2.111 1.222 0 2.111-.889 2.111-2.111s-.889-2.111-2.111-2.111zm2.555-3.777H12.457L7.347 7.078c-.222-.333-.555-.667-1-.667H1.792c-.667 0-1.111.444-1.111 1s.444 1 1.111 1h3.777l5.11 14.885c.111.444.555.666 1 .666h15.663c.555 0 1.111-.444 1.111-1 0-.666-.555-1.111-1.111-1.111zm2.333-11.442l-18.44-1.555h-.111c-.555 0-.777.333-.667.889l3.222 9.22c.222.555.889 1 1.444 1h13.441c.555 0 1.111-.444 1.222-1l.778-7.443c.111-.555-.333-1.111-.889-1.111zm-2 7.443H15.568l-2.333-6.776 15.108 1.222-.666 5.554z"></path></svg>
+                                          <span class="icon__fallback-text">Cart</span>
+                                          <span class="site-header__cart-indicator hide"></span>
                                         </a>
                                     </div>
-
-                                    <div class="customer-login-links sticky-hidden">
-
-                                        <a href="/account/login" id="customer_login_link">Account</a>
-
-                                    </div>
-
+                                    
+                                      <div class="customer-login-links sticky-hidden">
+                                        
+                                          <a href="/account/login" id="customer_login_link">Account</a>
+                                        
+                                      </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -12775,6 +12776,7 @@
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        align-items:center;
         width: 100%;
         -webkit-justify-content: flex-end;
         -moz-justify-content: flex-end;
