@@ -5,6 +5,8 @@
     --popup-background:linear-gradient(90deg,#051336,#000000);
     --color-times:#fff;
     --color-addtoCart:linear-gradient(90deg,#40c057,#2b8a3e);
+    --color-unavailable:rgb(213,213,213);
+    --color-soldOut:rgb(236,82,82);
 }
 
 .popup--container {
@@ -83,6 +85,18 @@
 
 .site-header__search.small--hide{
     margin-bottom:0;
+}
+
+.unavailable--addToCart{
+    background:var(--color-unavailable) !important;
+    cursor:not-allowed;
+    pointer-events: none;
+}
+
+.soldOut {
+    background:var(--color-soldOut) !important;
+    cursor:not-allowed;
+    pointer-events: none;
 }
 
 @media only screen and (max-width:500px){

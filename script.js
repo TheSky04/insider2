@@ -16,23 +16,11 @@ const colorSelectBoxEl = document.querySelector('#SingleOptionSelector-1');
 const minusBtn = document.querySelector('.js-qty__adjust.js-qty__adjust--minus');
 const plusBtn = document.querySelector('.js-qty__adjust.js-qty__adjust--plus');
 const quantity = document.querySelector('#Quantity');
+const colorInputEl = document.querySelector('#SingleOptionSelector-1');
+const unavailableColors = ['blue','red'];
+const soldOutSizes = ['7'];
+
 let currentQuantity = +quantity.textContent || 1;
-
-minusBtn.addEventListener('click', function() {
-
-    if (currentQuantity > 0) {
-        currentQuantity--;
-        quantity.value = currentQuantity;
-        document.querySelector('.popup--quantity').textContent = currentQuantity;
-    }
-});
-
-plusBtn.addEventListener('click', function() {
-
-    currentQuantity++;
-    quantity.value = currentQuantity;
-    document.querySelector('.popup--quantity').textContent = currentQuantity;
-});
 
 let product = {
     productName:'Vans Sh 8 HI',
@@ -42,15 +30,13 @@ let product = {
     quantity:1
 }
 
- function updatePopup(product) {
+function updatePopup(product) {
     document.querySelector('.popup--productName').textContent = product.productName;
     document.querySelector('.popup--price').textContent = `$${product.price.toFixed(2)}`;
     document.querySelector('.popup--size').textContent = product.size;
     document.querySelector('.popup--color').textContent = product.color;
     document.querySelector('.popup--quantity').textContent = product.quantity;
 }
-
-document.addEventListener('DOMContentLoaded', () => updatePopup(product));
 
 const observerCallback  = (entries) => entries.forEach(entry => entry.isIntersecting ? makePopupBlue() : makePopupWhite());
 
@@ -113,11 +99,56 @@ const addToCart = () => {
     closePopup();
 };
 
+const handleChangeColor = (e) => {
+
+    if(unavailableColors.includes(e.target.value)){
+        addToCartEl.classList.add('unavailable--addToCart');
+        addToCartEl.textContent = 'UNAVAILABLE';
+    } else {
+        addToCartEl.textContent = 'Add to Cart';
+        addToCartEl.classList.remove('unavailable--addToCart');
+    }
+
+    handleSizeSelectBox();
+};
+
+const handleSizeSelectBox = (e) => {
+
+    if(soldOutSizes.includes(e.target.value)){
+        addToCartEl.classList.add('soldOut');
+        addToCartEl.textContent = 'SOLD OUT';
+    } else {
+        addToCartEl.textContent = 'Add to Cart';
+        addToCartEl.classList.remove('soldOut');
+    }
+
+    handleChangeColor();
+};
+
+
+colorInputEl.addEventListener('change',handleChangeColor);
+sizeSelectBoxEl.addEventListener('change',handleSizeSelectBox);
+document.addEventListener('DOMContentLoaded', () => updatePopup(product));
 sizeSelectBoxEl.addEventListener('change',(e) => document.querySelector('.popup--size').textContent = e.target.value);
 colorSelectBoxEl.addEventListener('change',(e) => document.querySelector('.popup--color').textContent = e.target.value);
-
 addToCartEl.addEventListener('click',addToCart);
 addToCartBtnBlue.addEventListener('click',addToCart);
 timesEl.addEventListener('click',closePopup);
+minusBtn.addEventListener('click', function() {
 
+    if (currentQuantity > 0) {
+        currentQuantity--;
+        quantity.value = currentQuantity;
+        document.querySelector('.popup--quantity').textContent = currentQuantity;
+    }
+});
+
+plusBtn.addEventListener('click', function() {
+
+    currentQuantity++;
+    quantity.value = currentQuantity;
+    document.querySelector('.popup--quantity').textContent = currentQuantity;
+});
+
+quantity.addEventListener('change',(e) => document.querySelector('.popup--quantity').textContent = e.target.value);
 
