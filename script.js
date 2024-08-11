@@ -99,30 +99,53 @@ const addToCart = () => {
     closePopup();
 };
 
+const showSoldOut = () => {
+    addToCartEl.classList.add('soldOut');
+    addToCartEl.classList.remove('unavailable--addToCart');
+    addToCartEl.textContent = 'SOLD OUT';
+};
+
+const showUnavailable = () => {
+    addToCartEl.classList.add('unavailable--addToCart');
+    addToCartEl.classList.remove('soldOut');
+    addToCartEl.textContent = 'UNAVAILABLE';
+};
+
+const showAddToCart = () => {
+    addToCartEl.textContent = 'Add to Cart';
+    addToCartEl.classList.remove('unavailable--addToCart');
+    addToCartEl.classList.remove('soldOut');
+};
+
 const handleChangeColor = (e) => {
 
     if(unavailableColors.includes(e.target.value)){
-        addToCartEl.classList.add('unavailable--addToCart');
-        addToCartEl.textContent = 'UNAVAILABLE';
-    } else {
-        addToCartEl.textContent = 'Add to Cart';
-        addToCartEl.classList.remove('unavailable--addToCart');
+        showUnavailable();
+        return;
     }
 
-    handleSizeSelectBox();
+    if(!unavailableColors.includes(e.target.value) && soldOutSizes.includes(sizeSelectBoxEl.value)){
+        showSoldOut();
+        return;
+    }
+
+    showAddToCart();
+
 };
 
 const handleSizeSelectBox = (e) => {
 
-    if(soldOutSizes.includes(e.target.value)){
-        addToCartEl.classList.add('soldOut');
-        addToCartEl.textContent = 'SOLD OUT';
-    } else {
-        addToCartEl.textContent = 'Add to Cart';
-        addToCartEl.classList.remove('soldOut');
-    }
+    if(unavailableColors.includes(colorInputEl.value)){
+        showUnavailable();
+        return;
+    } 
 
-    handleChangeColor();
+    if(!unavailableColors.includes(colorInputEl.value) && soldOutSizes.includes(e.target.value)){
+        showSoldOut();
+        return;
+    } 
+
+    showAddToCart();
 };
 
 
